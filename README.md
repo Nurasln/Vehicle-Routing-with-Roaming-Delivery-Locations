@@ -46,12 +46,16 @@ The dashboard will open at `http://localhost:3000`.
 
 ## Deployment Guide
 
-### Backend (Railway)
-1. Connect your GitHub repository to [Railway](https://railway.app/).
-2. Create a new service from the repository.
-3. Set the **Root Directory** to `backend`.
-4. Railway will automatically detect the `Procfile` and `requirements.txt`.
-5. Once deployed, copy your backend URL (e.g., `https://backend-production.up.railway.app`).
+### Backend (Render)
+1. Sign up at [Render](https://render.com/).
+2. Click **New +** and select **Web Service**.
+3. Connect your GitHub repository.
+4. Set the following configurations:
+   - **Root Directory**: `backend`
+   - **Runtime**: `Python 3`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `uvicorn api:app --host 0.0.0.0 --port $PORT`
+5. Once deployed, copy your backend URL (e.g., `https://your-app.onrender.com`).
 
 ### Frontend (Vercel)
 1. Connect your GitHub repository to [Vercel](https://vercel.com/).
