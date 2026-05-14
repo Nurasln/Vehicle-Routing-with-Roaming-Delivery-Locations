@@ -44,6 +44,22 @@ The dashboard will open at `http://localhost:3000`.
 - **Interactive Dashboard**: Real-time convergence tracking and route visualization.
 - **Live Run**: Execute the optimizer directly from the UI and see the results instantly.
 
+## Deployment Guide
+
+### Backend (Railway)
+1. Connect your GitHub repository to [Railway](https://railway.app/).
+2. Create a new service from the repository.
+3. Set the **Root Directory** to `backend`.
+4. Railway will automatically detect the `Procfile` and `requirements.txt`.
+5. Once deployed, copy your backend URL (e.g., `https://backend-production.up.railway.app`).
+
+### Frontend (Vercel)
+1. Connect your GitHub repository to [Vercel](https://vercel.com/).
+2. Create a new project and set the **Root Directory** to `frontend`.
+3. In the **Environment Variables** section, add:
+   - `REACT_APP_API_URL`: Your Railway backend URL (from the previous step).
+4. Click **Deploy**.
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
