@@ -11,8 +11,6 @@ import {
   ResponsiveContainer,
   BarChart,
   Bar,
-  ScatterChart,
-  Scatter,
   Cell,
 } from "recharts";
 
@@ -1055,7 +1053,7 @@ function LiveRun() {
         console.error(err);
         setError("Failed to load instances. Is the FastAPI backend running on port 8000?");
       });
-  }, []);
+  }, [API_URL]);
 
   const handleRun = async () => {
     if (!selectedInst) return;
