@@ -2,6 +2,11 @@
 
 This project implements a Metaheuristic approach (SA-GVNS) to solve the Vehicle Routing Problem with Roaming Delivery Locations. It includes a Python-based optimization engine and a React-based interactive dashboard.
 
+## 🚀 Live Demo
+
+- **Dashboard (Frontend):** [https://vehicle-routing-with-roaming-delive-brown.vercel.app](https://vehicle-routing-with-roaming-delive-brown.vercel.app)
+- **API Documentation (Backend):** [https://vehicle-routing-with-roaming-delivery.onrender.com/docs](https://vehicle-routing-with-roaming-delivery.onrender.com/docs)
+
 ## Project Structure
 
 - `backend/`: FastAPI application containing the SA-GVNS optimizer.
@@ -44,25 +49,16 @@ The dashboard will open at `http://localhost:3000`.
 - **Interactive Dashboard**: Real-time convergence tracking and route visualization.
 - **Live Run**: Execute the optimizer directly from the UI and see the results instantly.
 
-## Deployment Guide
+## Deployment
 
 ### Backend (Render)
-1. Sign up at [Render](https://render.com/).
-2. Click **New +** and select **Web Service**.
-3. Connect your GitHub repository.
-4. Set the following configurations:
-   - **Root Directory**: `backend`
-   - **Runtime**: `Python 3`
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn api:app --host 0.0.0.0 --port $PORT`
-5. Once deployed, copy your backend URL (e.g., `https://your-app.onrender.com`).
+1. Deploy the `backend/` folder as a **Web Service**.
+2. **Build Command:** `pip install -r requirements.txt`
+3. **Start Command:** `uvicorn api:app --host 0.0.0.0 --port $PORT`
 
 ### Frontend (Vercel)
-1. Connect your GitHub repository to [Vercel](https://vercel.com/).
-2. Create a new project and set the **Root Directory** to `frontend`.
-3. In the **Environment Variables** section, add:
-   - `REACT_APP_API_URL`: Your Railway backend URL (from the previous step).
-4. Click **Deploy**.
+1. Deploy the `frontend/` folder.
+2. Set Environment Variable: `REACT_APP_API_URL` = `https://vehicle-routing-with-roaming-delivery.onrender.com`
 
 ## License
 
